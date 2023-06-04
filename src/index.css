@@ -1,0 +1,85 @@
+/* all globle style write here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+:root {
+    --font-inter: 'Inter', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
+    --font-roboto:  'Roboto', sans-serif;
+
+    /* --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-highlight: #2dd4bf;
+  
+    --btn-bg-color: #e5e7eb;
+    --btn-text-color-black: #1e293b; */
+
+    --text-primary: #111827;
+    --text-secondary: #334155;
+    --text-highlight: #14b8a6;
+  
+    --btn-bg-color: #1e293b;
+    --btn-text-color-black: #ffffff;
+
+
+    --padding-inline: 13%;
+    --bg-dark: #111827;
+}
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width:1150px) {
+    :root {
+        --padding-inline: 2%;
+    }
+}
+
+@media screen and (max-width:670px) {
+    :root {
+        --padding-inline: 5%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4242424a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #68686867;
+    border-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* background-color: var(--bg-dark); */
+    font-family: var(--font-inter);
+}
+
+#success-modal-root {
+    display: grid;
+}

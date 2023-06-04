@@ -1,0 +1,64 @@
+.success-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    position: fixed;
+    top: 30vh;
+    z-index: 99999;
+    place-content: center;
+    justify-self: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem 2rem 2rem;
+    width: 25rem;
+    animation: slide-down 300ms ease-out forwards;
+    background-color: #fff;
+    border-radius: .5rem;
+    font-family: var(--font-roboto);
+}
+
+.content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+
+.success-header button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #2dd4bf;
+    border-radius: .6rem;
+    color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .success-header {
+        width: 95%;
+        top: 20vh;
+    }
+
+    .content h2 {
+        font-size: 1.7rem;
+    }
+}

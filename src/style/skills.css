@@ -1,0 +1,36 @@
+.my-skills {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 1.5rem;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 3rem;
+}
+
+.my-skill {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.my-skill img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .my-skills {
+        grid-template-columns: repeat(2, 1fr);
+        /* row-gap: 1rem; */
+    }
+
+    .my-skill img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+}

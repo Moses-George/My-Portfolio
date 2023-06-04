@@ -1,0 +1,131 @@
+
+:root {
+
+    --nav-bg: rgba(255, 255, 255, .5);
+
+    --link-color: #687280;
+    --link-active: #2dd4bf;
+    --link-hover: #1f1f1f;
+
+    --btn-bg: #e5e7eb;
+
+}
+
+nav {
+    padding-inline: var(--padding-inline);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: .3rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(16px);
+    z-index: 5;
+    transition: .5s ease-in-out;
+}
+
+.hide_navbar {
+    top: -80px;
+}
+
+.logo img {
+    width: 80px;
+    height: 65px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+
+.menu_toggler {
+    display: none;
+}
+
+a.nav-link {
+    color: var(--link-color);
+    font-family: (--font-inter);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+
+a.nav-link:hover {
+    color: var(--link-hover);
+}
+
+a.nav-link.active {
+    color: var(--link-active);
+    font-weight: 700;
+}
+
+.theme_toggler {
+    display: grid;
+    place-items: center;
+    background-color: var(--btn-bg);
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: .5s ease;
+}
+
+.theme_toggler:hover {
+    border: 3px solid var(--link-active);
+}
+
+
+
+.active {
+    position: relative;
+    text-transform: capitalize;
+}
+
+
+.active::after {
+    content: "";
+    position: absolute;
+    background-color: var(--link-active);
+    width: 100%;
+    bottom: -1.5rem;
+    left: 0;
+    height: 3px;
+    transition: width 150ms ease-in-out;
+}
+
+.unselected {
+    color: var(--link-color);
+    border: none;
+}
+
+
+@media screen and (max-width:668px) {
+
+    .theme_toggler {
+        display: none;
+    }
+
+    .menu_toggler {
+        padding: 11px;
+        background: var(--btn-bg);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        transition: .5s ease;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu_toggler:hover {
+        border: 3px solid var(--link-active);
+    }
+}

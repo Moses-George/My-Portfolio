@@ -1,0 +1,245 @@
+.dark {
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+
+    --footer-input-bg: #111827;
+    --footer-submit-btn: #6366f1;
+}
+
+.light {
+    --text-primary: #111827;
+    --text-secondary: #485363;
+
+    --footer-input-bg: #ffffff;
+    --footer-submit-btn: #6366f1;
+}
+
+footer {
+    padding-inline: var(--padding-inline);
+    margin-top: 4rem;
+    background: url('../assets/footer_bg.png') no-repeat;
+    background-size: 80% 140%;
+    background-position: center;
+}
+
+footer hr {
+    width: 100%;
+    height: .5px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+footer .footer_content {
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer_content .footer_links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.footer_links .link_list {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+}
+
+.link_list p.link_heading {
+    font-family: var(--font-manrope);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    margin-block: .8rem;
+}
+
+.link_list a.link {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+    margin-block: .4rem;
+}
+
+.link_list a.link_under_construction {
+    opacity: .5;
+    cursor: no-drop;
+    pointer-events: stroke;
+}
+
+.link_list a.link:hover {
+    color: var(--text-primary);
+}
+
+.ring {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1af;
+    border-bottom-color: transparent;
+    border-left-color: transparen   t;
+    animation: animate .5s linear infinite;
+}
+
+.socials {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.socials a img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: none;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message_on_submit {
+    grid-area: msg;
+    margin-left: 25px;
+    color: lightgreen;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-inter);
+}
+
+.footer_bottom {
+    padding-block: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_bottom .author {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.social_links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social_links a {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.social_links a:hover {
+    color: var(--text-primary);
+}
+
+@media screen and (max-width:1280px) {
+    footer .footer_content {
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "links links  links links nolink nolink "
+            "form form form form form form";
+    }
+
+    .footer_content .footer_links {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-area: links;
+    }
+
+    form.footer_form {
+        grid-area: form;
+    }
+}
+
+@media screen and (max-width:668px) {
+    footer {
+        background-size: cover;
+    }
+
+    footer .footer_content {
+        padding-top: 5rem;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "links links  links links links links "
+            "form form form form form form";
+    }
+
+    .footer_content .footer_links {
+        grid-area: links;
+        gap: .8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer_links .link_list {
+        min-width: 150px;
+    }
+
+    form.footer_form {
+        grid-area: form;
+    }
+
+    .footer_form .input_types {
+        margin-top: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'input_email'
+            'submit_btn'
+            'msg';
+        place-items: center;
+    }
+
+    .input_types input[type="email"],
+    .input_types input[type="submit"] {
+        width: 80%;
+        text-align: center;
+    }
+
+    .footer_bottom {
+        background: url('../assets/footer_bg.png') no-repeat;
+        background-size: cover;
+        background-position: top;
+        backdrop-filter: blur(12px);
+    }
+
+}
