@@ -227,7 +227,7 @@ form button:hover {
 @media screen and (min-width: 320px) and (max-width: 500px) {
     .contact-me {
         grid-template-columns: 1fr;
-        /* margin: 0; */
+        margin: 0;
         width: 85%;
     }
 
