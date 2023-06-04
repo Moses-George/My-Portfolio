@@ -9,6 +9,7 @@ import Redux from "../../assets/skills/redux.png";
 import Api from "../../assets/skills/api.png";
 import Git from "../../assets/skills/git.png";
 import Github from "../../assets/skills/github.png";
+import MUI from "../../assets/skills/mu5.png";
 import "../../style/skills.css";
 import { motion } from "framer-motion";
 
@@ -67,6 +68,11 @@ const myskills = [
         id: 11,
         name: "Github",
         src: Github
+    },
+    {
+        id: 12,
+        name: "MUI",
+        src: MUI
     }
 ]
 

@@ -22,7 +22,7 @@ import mobile10 from "../../assets/project_images/movie-app/mobile/mobile10.jpg"
 import useScreenWidth from "../../hooks/useScreenWidth";
 // import 
 
-const arr = [img1, img2, img3, img4, img5, img6, img7];
+const desktopImages = [img1, img2, img3, img4, img5, img6, img7];
 const mobileImages = [mobile1, mobile2, mobile3, mobile4, mobile5, mobile6, mobile7, mobile8, mobile9, mobile10];
 
 const CarouselItem = ({ width, src }) => {
@@ -39,6 +39,9 @@ const Carousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const timeoutRef = useRef(null);
 
+    const widthSize = useScreenWidth(); 
+    const mobileWidth = 500;
+
     const resetTimeout = () => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
@@ -47,15 +50,13 @@ const Carousel = () => {
 
     useEffect(() => {
         resetTimeout();
-        timeoutRef.current = setTimeout(() => setActiveIndex(prevIndex => prevIndex === arr.length - 1 ? 0 : prevIndex + 1), 5000)
+        timeoutRef.current = setTimeout(() => setActiveIndex(prevIndex => prevIndex === (widthSize > mobileWidth ? desktopImages : mobileImages).length - 1 ? 0 : prevIndex + 1), 5000)
 
         return () => {
             resetTimeout();
         };
     }, [activeIndex]);
 
-    const widthSize = useScreenWidth(); 
-    const mobileWidth = 500;
 
     return (
         <div className="carousel">
@@ -64,10 +65,10 @@ const Carousel = () => {
                 <Link to="/projects">See all</Link>
             </div>
             <div className="inner" style={{ transform: `translateX(${-activeIndex * 100}%)` }}>
-                {(widthSize > mobileWidth ? arr : mobileImages).map(slide => <CarouselItem key={slide} width="100%" src={slide} />)}
+                {(widthSize > mobileWidth ? desktopImages : mobileImages).map(slide => <CarouselItem key={slide} width="100%" src={slide} />)}
             </div>
             <div className="slideshowDots">
-                {arr.map((__, indx) => (
+                {(widthSize > mobileWidth ? desktopImages : mobileImages).map((__, indx) => (
                     <div key={indx} onClick={() => setActiveIndex(indx)} className={`slideshowDot ${activeIndex === indx ? "activeDot" : ""}`}></div>
                 ))}
             </div>

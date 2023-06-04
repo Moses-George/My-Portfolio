@@ -64,6 +64,8 @@ const Contact = () => {
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 initial={{ scale: 0, opacity: 0, y: 300 }}
                 transition={{ duration: 1 }}
+                style={{paddingLeft:0, paddingRight:0}}
+                className="contact-page"
             >
                 <div className="contact-me">
                     <div className="contact-form">
