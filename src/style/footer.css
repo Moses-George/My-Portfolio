@@ -1,18 +1,4 @@
-.dark {
-    --text-primary: #ffffff;
-    --text-secondary: #9ca3af;
 
-    --footer-input-bg: #111827;
-    --footer-submit-btn: #6366f1;
-}
-
-.light {
-    --text-primary: #111827;
-    --text-secondary: #485363;
-
-    --footer-input-bg: #ffffff;
-    --footer-submit-btn: #6366f1;
-}
 
 footer {
     padding-inline: var(--padding-inline);
@@ -52,7 +38,7 @@ footer .footer_content {
     font-family: var(--font-manrope);
     font-size: 14px;
     line-height: 20px;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--text-primary);
     text-transform: uppercase;
     margin-block: .8rem;
@@ -68,11 +54,6 @@ footer .footer_content {
     margin-block: .4rem;
 }
 
-.link_list a.link_under_construction {
-    opacity: .5;
-    cursor: no-drop;
-    pointer-events: stroke;
-}
 
 .link_list a.link:hover {
     color: var(--text-primary);

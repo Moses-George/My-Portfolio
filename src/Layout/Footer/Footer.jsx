@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer_content">
                 <div className="footer_links">
                     <div className="link_list">
-                        <p className="link_heading">general</p>
+                        <p className="link_heading">pages</p>
                         <Link to="/" className="link">
                             Home
                         </Link>
@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
 
                     <div className="link_list">
-                        <p className="link_heading">extra</p>
+                        <p className="link_heading">contact me</p>
                         <a href="https://drive.google.com/file/d/1sUo06mNkvIa6-AIK8Lk0OHnPWmvK8D-7/view?usp=sharing" className="link" title="Resume" >
                             Resume
                         </a>

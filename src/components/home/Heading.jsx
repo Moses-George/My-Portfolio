@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaDownload } from "react-icons/fa";
 
 
 const Heading = ({ theme }) => {
@@ -36,7 +36,7 @@ const Heading = ({ theme }) => {
         className="btn_group"
       >
         <Link to="/blogs" className="blog_link">
-          Download Resume <FaArrowDown style={{marginLeft:".5rem"}} />
+          Download Resume <FaDownload style={{marginLeft:".5rem"}} />
         </Link>
         <Link to="/about" className="about_link">
           More about me <FaArrowRight style={{marginLeft:".5rem"}} />

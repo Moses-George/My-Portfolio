@@ -21,7 +21,7 @@ const SidebarOverlay = ({ openSidebar, setOpenSidebar }) => {
                 <img src={logo} alt="logo" />
             </div>
                 <div className='sidebar-arrowback'>
-                    <FaArrowLeft onClick={() => setOpenSidebar(false)} style={{ color: "#fff", fontSize: "35px" }} />
+                    <FaArrowLeft onClick={() => setOpenSidebar(false)} style={{ color: "#fff", fontSize: "30px" }} />
                 </div>
             </div>
             <ul>

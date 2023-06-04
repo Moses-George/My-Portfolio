@@ -80,6 +80,10 @@ body {
     font-family: var(--font-inter);
 }
 
+.main-container {
+    width: 100%;
+}
+
 #success-modal-root {
     display: grid;
 }
