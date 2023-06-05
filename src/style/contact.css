@@ -225,6 +225,7 @@ form button:hover {
     background-color: #95e7db;
 }
 
+
 @media screen and (min-width: 320px) and (max-width: 500px) {
     .contact-me {
         grid-template-columns: 1fr;
@@ -235,5 +236,11 @@ form button:hover {
     .contact-form {
         margin: 0;
         grid-row: 2/3;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 385px) {
+    .contact-me {
+        width: 100%;
     }
 }

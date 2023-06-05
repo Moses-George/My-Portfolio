@@ -15,17 +15,13 @@ const About = () => {
         transition={{ duration: 1 }}
         className="about"
       >
-        <Heading heading="about me" description="What you need to know about me" />
+        <Heading heading="about me" description="PROFESSIONAL SUMMARY" />
         <div className="description">
           <p className="about_me_descrition">
-            I’m George, a passionate Frontend developer and an aspiring MERN Stack developer,
-            a creative coder, algorithm enthusiast. A sololearn certified JavaScript developer
-            with over 15 months of experience in working with HTML, CSS, JavaScript as the fundamentals
-            of Frontend web development in advance with frameworks. In these past months, i've collaborated
-            with my sibling developer and other teams in building great UIs and well optimized web applications
-            and also co-worked in algorithm problem solving. My mission is to
-            translate user-focussed designs into pixel-perfect websites or
-            applications that run blazing fast.
+            Front-End Developer with a passion for web development and success in managing development projects.
+            Skilled in conceptualizing, designing, developing, and deploying software containing logical and mathematical solutions to business problems.
+            Dedicated to driving innovation with the ability to follow industry and technological trends, and facilitating early adoption of innovations.
+            Capable of continuous learning from senior developers while being mentored. Eager to tackle problems and continue to find ways to maximize user efficiency.
           </p>
 
           <ul className="about_me_list">
@@ -41,7 +37,7 @@ const About = () => {
               <a href="mailto:mosesgeorge323287@gmail.com">mosesgeorge323287@gmail.com</a>
             </li>
           </ul>
-        </div> 
+        </div>
 
         {/* education and work section  */}
         <div className="education_and_experience">
@@ -60,7 +56,6 @@ const About = () => {
               <p className="title-2">
                 University of Benin, Benin City.
               </p>
-              <p className="title-3">Current Grade : 4.40 / 5.00 CGPA</p>
               <p className="title-4">Aug 2020 - Till Date</p>
             </div>
 
@@ -82,7 +77,7 @@ const About = () => {
 
             <div className="graph">
               <p className="title-1">Certification at Sololearn</p>
-              <p className="title-2">JavaScript web development</p>
+              <p className="title-2">Theoretical and practical application of Javascript</p>
               <p className="title-3">Aug 2022</p>
             </div>
           </div>
@@ -144,7 +139,7 @@ const About = () => {
             </div>
           </section>
         </div>
-      </motion.main> 
+      </motion.main>
     </>
   );
 };
