@@ -2,7 +2,6 @@
     margin: 0 auto;
     overflow: hidden;
     width: 80%;
-    /* border: 1px solid var(--newletter-input-border); */
     border-radius: 1.5rem;
     padding: 1rem 0;
     color: var(--text-primary);

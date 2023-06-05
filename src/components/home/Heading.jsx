@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
+import Resume from "../../assets/resume/Resume.pdf";
 
 
 const Heading = ({ theme }) => {
@@ -18,7 +19,7 @@ const Heading = ({ theme }) => {
           transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
           className="heading_text"
         >
-          Hi! I'm <span>George Moses</span>, a Frontend Developer
+          Hi! I'm <span>George Moses</span>, a Front-End Developer
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}
@@ -35,7 +36,7 @@ const Heading = ({ theme }) => {
         transition={{ delay: 1.2, duration: 1, ease: "easeIn" }}
         className="btn_group"
       >
-        <Link to="/blogs" className="blog_link">
+        <Link to={Resume} target="_blank" className="blog_link" download="Resume">
           Download Resume <FaDownload style={{marginLeft:".5rem"}} />
         </Link>
         <Link to="/about" className="about_link">

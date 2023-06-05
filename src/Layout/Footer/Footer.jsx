@@ -26,7 +26,7 @@ const Footer = () => {
 
                     <div className="link_list">
                         <p className="link_heading">contact me</p>
-                        <a href="https://drive.google.com/file/d/1sUo06mNkvIa6-AIK8Lk0OHnPWmvK8D-7/view?usp=sharing" className="link" title="Resume" >
+                        <a href="https://docs.google.com/document/d/13xLws4FNS9N4Dgfk1rvFlXzfC6YyMc8eWPX3ToldUtw/edit?usp=drivesdk" className="link" title="Resume" >
                             Resume
                         </a>
                         <Link to="/contact" className="link" >
